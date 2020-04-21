@@ -1,4 +1,4 @@
-É uma pena, mas algumas pessoas não pensam em estética quando estão codando. Certamente o uso adequado de espaços e recuo são comuns, mas podemos ir mais fundo que isso. É certo que um bom código deve, antes de tudo, ser executado de maneira eficiente. Mas quero ir além. Penso que ele também deve ser legível para quem os criam, depuram e o mantêm. Tudo está funcionando e certamente isso é importante, mas, como alguém que gosta de organização e uniformidade, acredito que codar não se trata somente de seguir boas práticas de implementação. É preciso estilo, sabor e porque não consistência.
+É uma pena, mas algumas pessoas não pensam em estética quando estão codando. Certamente o uso adequado de espaços e recuo são comuns, mas podemos ir mais fundo que isso. É certo que um bom código deve, antes de tudo, ser executado de maneira eficiente. Mas quero ir além. Penso que ele também deve ser legível para quem os criam, depuram e mantêm. Tudo está funcionando e certamente isso é importante, mas, como quem gosta de organização e uniformidade, acredito que codar não se trata somente de seguir boas práticas de implementação. É preciso estilo, sabor e porque não consistência.
 
 Sei que outros já escreveram uma tonelada de artigos sobre esse tópico. Esta é apenas uma pequena tentativa de expressar como gosto de organizar visualmente meu código. Neste sentido Ruby é ótimo pois nos permite grande flexibilidade para deixar o código com ótima aparência. Mas vamos ao que realmente interessa. Considere o seguinte exemplo:
 
@@ -21,13 +21,13 @@ def initialize(params)
 @update_at = Time.parse(params[:update_at].to_s)
 end
 
-def unit_price_to_dollars
+def preco_unitario_para_real
 preco_unitario.to_f
 end
 end
 ```
 
-Mesmo programadores novos saberão o que está errado aqui. Quase dói ao olhar. Mas esse costuma ser o primeiro passo. Aprender como recuar blocos corretamente é a chave para criar um código legível e bonito. Vamos identar adequado cada linha. Vale constar que a convenção Ruby preconiza a utilização de 2 espaços para cada "ninho" de código. Sendo assim:
+Mesmo programadores novos saberão o que está errado aqui. Quase dói ao olhar. Mas esse costuma ser o primeiro passo. Aprender como recuar blocos corretamente é a chave para criar um código legível e bonito. Vamos identar adequadamente cada linha. Vale constar que a convenção Ruby preconiza a utilização de 2 espaços para cada "ninho" de código. Sendo assim:
 
 ```Ruby
 # Segunda Versão
@@ -48,7 +48,7 @@ class Pedido
     @update_at = Time.parse(params[:update_at].to_s)
   end
 
-  def unit_price_to_dollars
+  def preco_unitario_para_real
     preco_unitario.to_f
   end
 end
@@ -108,7 +108,7 @@ class Pedido
     @update_at      = Time.parse(params[:update_at].to_s)
   end
 
-  def unit_price_to_dollars
+  def preco_unitario_para_real
     preco_unitario.to_f
   end
 end
@@ -133,7 +133,7 @@ Usuario.create(
   data_nascimento:   '01/01/2000'
 )
 ```
-Mais uma vez, encontramos os mesmos problemas. Antes não conseguíamos nem ver o código inteiro. Trabalhar desta maneira é muito ruim. Perdemos muito tempo tendo percorrendo a área de visualização para conseguir ver todos os atributos do novo usuário. Após a revisão temos algo muito mais amigável. Visualizamos todos os atributos do nosso novo usuário.
+Mais uma vez, encontramos os mesmos problemas. Antes não conseguíamos nem ver o código inteiro. Trabalhar desta maneira é muito ruim. Perdemos muito tempo percorrendo a área de visualização para conferir todos os atributos do novo usuário. Após a revisão temos algo muito mais amigável.
 
 Por último, considere o seguinte:
 
@@ -145,7 +145,7 @@ animais.map do |animal|
   animal.capitalize
 end
 ```
-Aqui estamos iterando sobre a array animais e a cada elemento aplicando o método de capitalização. Ótimo! Mas podemos torná-lo mais simples.
+Aqui estamos iterando sobre a array animais e a cada elemento aplicando o método de capitalização. Ótimo! Mas como torná-lo mais simples? Acompanhe:
 
 ```Ruby
 # Depois
@@ -159,4 +159,7 @@ Done!
 
 Para finalizar, como dito inicialmente, esse tópico é geralmente trivial, mas um pouco de cuidado com o uso de espaços e recuo podem deixar seu trabalho em alto nível. Tenha certeza que estas poucas dicas facilitarão trabalho em equipe e a manutenção do código. Você dificilmente trabalhará sozinho, sendo a facilidade de leitura do que você faz por colegas fundamental para a escalabilidade de seus projetos no longo prazo.
 
-Obs: Fiz de tudo para garantir que este artigo não contenha erros. No entanto, ninguém é perfeito, e eles podem ocorrer. Se você encontrar algum, ficarei muito grato se você puder me auxiliar incluindo-o nos comentários. Acesso o repositório [Codei no GitHub](https://github.com/codei-codei/deixe-seu-codigo-ruby-mais-estiloso) para ter acesso aos códigos apresentados aqui como exemplo.
+**Importante**
+Sabendo o quanto seu tempo é precioso e esperando que este post consiga auxiliar em seu crescimento pessoal fiz de tudo para garantir que ele não contenha erros. No entanto, ninguém é perfeito, e eles podem ocorrer. Se você encontrar algum, ficarei muito grato se puder me auxiliar entrando em contato através do formulário abaixo ou, caso queira praticar suas habilidades, solicitando um pull request no repositório [Codei do GitHub](https://github.com/codei-codei/deixe-seu-codigo-ruby-mais-estiloso) criado para elaboração deste artigo e para armazenar aos códigos aqui apresentados como exemplo.
+
+Divirta-se!!

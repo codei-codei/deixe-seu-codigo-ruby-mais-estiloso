@@ -16,7 +16,7 @@ def initialize(params)
 @update_at = Time.parse(params[:update_at].to_s)
 end
 
-def unit_price_to_dollars
+def preco_unitario_para_real
 preco_unitario.to_f
 end
 end
@@ -39,7 +39,7 @@ class Pedido
     @update_at = Time.parse(params[:update_at].to_s)
   end
 
-  def unit_price_to_dollars
+  def preco_unitario_para_real
     preco_unitario.to_f
   end
 end
@@ -64,7 +64,7 @@ class Pedido
     @update_at = Time.parse(params[:update_at].to_s)
   end
 
-  def unit_price_to_dollars
+  def preco_unitario_para_real
     preco_unitario.to_f
   end
 end
@@ -89,7 +89,7 @@ class Pedido
     @update_at      = Time.parse(params[:update_at].to_s)
   end
 
-  def unit_price_to_dollars
+  def preco_unitario_para_real
     preco_unitario.to_f
   end
 end
